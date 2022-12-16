@@ -5,7 +5,7 @@ import router from './routes/index.js';
 const app = express();
 
 // Definir puerto
-const port = process.env.PORT || 4500;
+const port = process.env.PORT || 4000;
 
 // Agregar router
 app.use('/', router);
