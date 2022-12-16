@@ -20,6 +20,6 @@ app.use('/', router);
 // })
 
 
-app.listen(() =>{
+app.listen(port,() =>{
     console.log(`El servidor esta funcionando en el puerto ${port}`);
-})
+});
