@@ -7,17 +7,12 @@ const app = express();
 // Definir puerto
 const port = process.env.PORT || 4000;
 
+// Habilitar PUG
+app.set('view engine', 'pug');
+
 // Agregar router
 app.use('/', router);
 
-
-// app.get('/', (request, response) => {
-//     response.send('Hola Mundo');
-//     response.json({
-//         id: 1
-//     });
-//     response.render()
-// })
 
 
 app.listen(port,() =>{
