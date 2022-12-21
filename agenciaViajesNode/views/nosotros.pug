@@ -2,7 +2,34 @@ extends ./layout/index
 block contenido
     main.container.mt-5 
         .row 
-            h1= pagina 
+            .col-md-5 
+                img(src="img/nosotros.jpg", alt="", class="img-fluid")
+            
+            .col-md-7 
+                h1 #{pagina}
+                blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium at enim ac faucibus. Sed nec consequat est. Suspendisse feugiat dolor nec sapien iaculis, eu viverra nunc ultricies. Duis faucibus sit amet massa ac varius. Aliquam sed elementum diam. Cras sed lectus vitae est condimentum auctor ac non sem. Nam at sollicitudin justo. Mauris rhoncus id arcu ut condimentum. 
+
+                p Curabitur nec nibh a ex eleifend aliquet ut et enim. Integer blandit nisi porttitor, blandit arcu nec, suscipit augue. Quisque ultrices ante tortor, et aliquam odio porttitor ut. Duis tempus tellus sed scelerisque lacinia. Quisque et euismod lorem, sed suscipit lectus. Proin vel feugiat nisi, elementum dignissim sapien. Maecenas sodales, lectus ac ornare dignissim, nisl felis dapibus tellus, nec dictum elit justo vitae nulla. Cras vitae egestas lorem, at dictum risus. Nulla et elit sapien. 
+
+                p Suspendisse imperdiet diam purus. Etiam aliquet volutpat massa sit amet dictum. Duis placerat dolor ligula, a cursus felis posuere ac. Vestibulum eleifend purus at fermentum blandit. Vivamus sagittis quam quis lacus aliquam, quis rhoncus purus elementum. Vestibulum ac placerat metus. 
+
+    .listado-iconos 
+        .container.mt-5.py-5.text-center 
+            .row 
+                .col-md-4 
+                    img(src="img/icono_seguridad.svg", alt="icono seguridad", class="img-fluid mb-4")
+                    h2.mb-4 Seguridad 
+                    p Curabitur nec nibh a ex eleifend aliquet ut et enim. Integer blandit nisi porttitor, blandit arcu nec, suscipit augue. 
+                
+                .col-md-4 
+                    img(src="img/icono_destinos.svg", alt="icono destinos", class="img-fluid mb-4")
+                    h2.mb-4 Destinos
+                    p Vestibulum eleifend purus at fermentum blandit. Vivamus sagittis quam quis lacus aliquam, quis rhoncus purus elementum. Vestibulum ac placerat metus.
+
+                .col-md-4 
+                    img(src="img/icono_precios.svg", alt="icono precios", class="img-fluid mb-4")
+                    h2.mb-4 Precios  
+                    p Curabitur nec nibh a ex eleifend aliquet ut et enim. Integer blandit nisi porttitor, blandit arcu nec, suscipit augue. 
             
         
         
