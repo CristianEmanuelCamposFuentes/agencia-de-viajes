@@ -2,5 +2,12 @@ extends ./layout/index
 
 block contenido
     main.container.mt-5 
-        .row 
-            h1= pagina 
+        .row.proximos-viajes 
+            each viaje in viajes  
+                .col-md-6.col-lg-4.mb-4 
+                    .card 
+                        img.card-img-top(src=`img/destinos_${viaje.imagen}.jpg`)
+                    .card-body 
+                        h2= viaje.titulo 
+                        p 
+                            | #{viaje.fecha_ida} - #{viaje.fecha_vuelta}
