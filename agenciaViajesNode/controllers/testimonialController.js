@@ -22,6 +22,10 @@ const guardarTestimonial = async (req, res) => {
     }
     
     if(errores.length>0){
+        // Consultar testimoniales existentes
+        const testimoniales = await Testimonial.findAll();
+
+
         // Mostrar la vista con errores
         // Render toma dos parametros, la vista y la informacion que quieres enviar
         res.render('testimoniales',{
@@ -29,7 +33,8 @@ const guardarTestimonial = async (req, res) => {
             errores,
             nombre,
             correo,
-            mensaje
+            mensaje,
+            testimoniales
         })
     } else {
         // Almacenarlo en la base de datos
