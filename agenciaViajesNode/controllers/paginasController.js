@@ -6,13 +6,23 @@ const paginaInicio = async (req, res) => {
 
     // Consultar 3 viajes del modelo viaje
 
+
+    const promiseDB = [];
+    promiseDB.push(Viaje.findAll({limit:3}));
+    promiseDB.push(Testimonial.findAll({limit:3}));
+
+
     try {
-        const viajes = await Viaje.findAll({limit:3});
+        // Ejecuta todas las promesas al mismo tiempo y lanza los resultados
+        // Cuando todas fueron realizadas
+
+        const resultado = await Promise.all(promiseDB) ;
 
         res.render('inicio', {
             pagina: 'Inicio',
             clase: 'home',
-            viajes
+            viajes: resultado[0],
+            testimoniales: resultado[1]
         });
     } catch (error) {
         console.log(error);
