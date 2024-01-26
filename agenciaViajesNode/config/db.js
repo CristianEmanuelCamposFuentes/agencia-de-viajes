@@ -1,7 +1,8 @@
+// Importar las dependencias
 import { Sequelize } from "sequelize";
 import dotenv from 'dotenv/config';
 
-
+// Crear una instancia de Sequelize para la conexión a la base de datos
 const db = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
     host: process.env.DB_HOST,
     port: '3306',
@@ -18,4 +19,5 @@ const db = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.D
     operatorsAliases: false
 });
 
+// Exportar la instancia de Sequelize
 export default db;
